@@ -10,7 +10,7 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [ x] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
 - [ ] Open the assignment in Canvas and click on the "Set up git" option.
 - [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
 - [ ] Check to see that Codegrade has accepted your git submission.
@@ -60,7 +60,23 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+
+Document Object Model or an object representation of the HTML webpage.
+
 2. What is an event?
+
+Events occur when specific a browser or user has a specific interaction with the page.
+
 3. What is an event listener?
+
+An event listener is detecting interaction on the page. This could be a click, mouseover, double click, and many more.
+
 4. Why would we convert a NodeList into an Array?
+
+Nodelists have more limitations than arrays. Turning them into arrays allows them to be manipulated and handled in different, more precise ways.
+
 5. What is a component?
+
+Components are reusable bits of code that enable developers to replicate and structure large amounts of data. Many of the most popular websites are loaded with components. This makes code dry, reusable, and efficient. Think of a craigslist page, or ebay, or facebook, or any other major site. There are components nested within the page making a developers job a breeze, rather than a chaotic nightmare.
+
+
