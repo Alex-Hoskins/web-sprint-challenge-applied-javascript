@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const Card = (article) => {
 
   const card1 = document.createElement('div')
@@ -22,6 +24,10 @@ const Card = (article) => {
   img1.src=`${article.authorPhoto}`
   authorName1.textContent=`By ${article.authorName}`
 
+  card1.addEventListener('click', () => {
+    console.log(`${article.headline}`)
+  })
+
   return card1;
 
 
@@ -45,6 +51,9 @@ const Card = (article) => {
   //
 }
 
+
+
+
 const cardAppender = (selector) => {
   // TASK 6
   // ---------------------
@@ -53,7 +62,34 @@ const cardAppender = (selector) => {
   // However, the articles do not come organized in a single, neat array. Inspect the response closely!
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
-  //
+  // take response and pass into function
+  // create variable equal to return
+  // Add to dom
+  
+  axios.get('http://localhost:5000/api/articles')
+  .then(resp=>{
+    console.log(resp);
+    for(let i = 0; i <resp.data.articles.bootstrap.length;i++){
+      const newCard = Card(resp.data.articles.bootstrap[i])
+      document.querySelector(selector).appendChild(newCard);
+    }
+    for(let i = 0; i <resp.data.articles.javascript.length;i++){
+      const newCard = Card(resp.data.articles.javascript[i])
+      document.querySelector(selector).appendChild(newCard);
+    }
+    for(let i = 0; i <resp.data.articles.jquery.length;i++){
+      const newCard = Card(resp.data.articles.jquery[i])
+      document.querySelector(selector).appendChild(newCard);
+    }
+    for(let i = 0; i <resp.data.articles.node.length;i++){
+      const newCard = Card(resp.data.articles.node[i])
+      document.querySelector(selector).appendChild(newCard);
+    }
+    for(let i = 0; i <resp.data.articles.technology.length;i++){
+      const newCard = Card(resp.data.articles.technology[i])
+      document.querySelector(selector).appendChild(newCard);
+    }
+  })
 }
 
 export { Card, cardAppender }

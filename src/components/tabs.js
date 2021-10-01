@@ -40,7 +40,7 @@ const tabsAppender = (selector) => {
   const selector2 = document.querySelector(`${selector}`)
   axios.get('http://localhost:5000/api/topics')
   .then(resp=>{
-    console.log(resp)
+    // console.log(resp)
     // take response and pass into function
     const newTab= Tabs(resp.data.topics);
     // create variable equal to return
