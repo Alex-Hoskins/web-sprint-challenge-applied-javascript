@@ -5,6 +5,7 @@ const Tabs = (topics) => {
   topics1.classList.add('topics');
   for (let i = 0; i < topics.length; i++) {
     const allTabs=document.createElement('div');
+    allTabs.classList.add('tab')
     allTabs.textContent=`${topics[i]}`
     topics1.appendChild(allTabs);
   }
@@ -26,6 +27,7 @@ const Tabs = (topics) => {
   // </div>
   //
 }
+
 
 const tabsAppender = (selector) => {
   // TASK 4
